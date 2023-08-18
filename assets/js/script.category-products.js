@@ -36,5 +36,8 @@ class CategoryService {
 const categoriesList = new CategoryService();
 
 function creatCategory(){
+    const categoryName = `candies`;
 
+    categoriesList.addCategory(categoryName);
+    console.log(categoriesList.categories);
 }
