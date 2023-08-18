@@ -80,13 +80,11 @@ function creatCategory() {
 
     categoriesList.addCategory(categoryName);
 
-    categoriesList.addCategory('candies')
-    categoriesList.addCategory('shoes')
-    categoriesList.addCategory('makes')
-
     console.log("categorias criadas!")
+    console.log(categoriesList.categories)
 
     clearFields()
+    displayCategories()
 }
 
 function creatProduct() {
@@ -130,6 +128,17 @@ function findProducts(id) {
     const product = productsList.getProductById(id);
 
     console.log(product);
+}
+
+function displayCategories(){
+    let content = "";
+    categoriesList.categories.forEach(category => {
+        content += `<li>${category.name}</li>`
+    });
+
+    document.getElementById("categorieslist").innerHTML = content
+} {
+    
 }
 
 function clearFields(){
