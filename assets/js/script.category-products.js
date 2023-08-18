@@ -35,30 +35,30 @@ class CategoryService {
     }
 
     // R => READ
-    getCategoriesById(id){
+    getCategoriesById(id) {
         return this.categories.find((category) => category.id == id);
     }
 
     //U =>  UPDATE
-    updateCategory(id, name){
+    updateCategory(id, name) {
         const category = this.getCategoriesById(id);
         category.name = name
     }
 
-    deleteCategory(id){
+    deleteCategory(id) {
         const category = this.getCategoriesById(id);
         const index = this.categories.indexOf(category);
 
         this.categories.splice(index, 1);
     }
 }
-class productService{
-    constructor(){
+class productService {
+    constructor() {
         this.products = [];
         this.nextproductsId = 1;
     }
 
-    addProduct(name, price, category){
+    addProduct(name, price, category) {
         const id = this.nextproductsId;
         this.nextproductsId++;
 
@@ -67,15 +67,15 @@ class productService{
         this.products.push(product);
         category.products.push(product);
     }
-    getProductById(id){
-        return this.products.find((product)=> product.id == id)
+    getProductById(id) {
+        return this.products.find((product) => product.id == id)
     }
 }
 
 const categoriesList = new CategoryService();
 const productsList = new productService();
 
-function creatCategory(){
+function creatCategory() {
     const categoryName = `candies`;
 
     categoriesList.addCategory(categoryName);
@@ -83,32 +83,49 @@ function creatCategory(){
     categoriesList.addCategory('candies')
     categoriesList.addCategory('shoes')
     categoriesList.addCategory('makes')
-    
+
+    console.log("categorias criadas!")
 }
 
-function creatProduct(){
-    const productName = "choco";
-    const productPrice = 0.5;
-    const productCategory = categoriesList.categories[0];
+function creatProduct() {
+    const productName1 = "choco";
+    const productPrice1 = 0.5;
+    const productCategory1 = categoriesList.categories[0];
 
-    productsList.addProduct(productName, productPrice, productCategory)
+    const productName2 = "sneaker";
+    const productPrice2 = 100;
+    const productCategory2 = categoriesList.categories[1];
 
-   // console.log(productsList.products)
+    const productName3 = "iphone";
+    const productPrice3 = 3000;
+    const productCategory3 = categoriesList.categories[2];
+
+    productsList.addProduct(productName1, productPrice1, productCategory1)
+    productsList.addProduct(productName2, productPrice2, productCategory2)
+    productsList.addProduct(productName3, productPrice3, productCategory3)
+
+    // console.log(productsList.products)
 }
 
-function findcategory(id){
+function findcategory(id) {
     const category = categoriesList.getCategoriesById(id);
     // console.log(category.name);
 }
 
-function editCategory(id, name){
+function editCategory(id, name) {
     categoriesList.updateCategory(id, name);
 
     console.log(categoriesList.categories)
 }
 
-function deleteCategory(id){
+function deleteCategory(id) {
     categoriesList.deleteCategory(id);
 
     console.log(categoriesList.categories)
+}
+
+function findProducts(id) {
+    const product = productsList.getProductById(id);
+
+    console.log(product);
 }
