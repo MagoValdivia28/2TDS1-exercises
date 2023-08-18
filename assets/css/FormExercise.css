@@ -1,0 +1,99 @@
+/*reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #4bd5ad;
+}
+
+#postform{
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #defff5;
+}
+
+body{
+    background-color: #272633;
+}
+
+label, input, textarea{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+}
+
+button{
+    background-color: #4bd5ad;
+    color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover{
+    background-color: #318d72;
+}
+
+#list{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #31808b;
+    margin: 2rem;
+}
+.post{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #defff5;
+}
+
+
+
+.post button{
+    background-color: #4bd5ad;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.post button:hover{
+    background-color: #318d72;
+}
+.hidden{
+    display: none;
+}
+
+#postform p {
+    color: red;
+    text-align: center;
+}

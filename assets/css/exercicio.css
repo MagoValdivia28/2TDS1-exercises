@@ -1,0 +1,88 @@
+/*reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #f1f1f1f1;
+}
+
+main{
+    background-color: #181818;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+#inputBox{
+    background-color: #2a2a2a;
+    display: flex;
+    padding: 3rem;
+    gap: 1rem;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+    margin-top: 1%;
+    border-radius: 10px;
+}
+input{
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #3e3e3e;
+    border: none;
+    width: 70%;
+    margin-left: 10%;
+    font-size: 20px;
+    color: #f1f1f1;
+}
+button{
+    width: 5%;
+    border-radius: 8px;
+    background-color: #3e3e3e;
+    border:none;
+    height: 9.2vh;
+    
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: #535252;
+
+}
+#result{
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+}
+.hidden{
+    display: none;
+}
+
+#boxTaskList{
+    background-color: #2a2a2a;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15%;
+    border-radius: 10px;
+}
+#div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #3e3e3e;
+    margin-right: 1px;
+}
+#bt1{
+    background-color: #181818;
+    margin-right: 20px;
+}
+
+#bt1:hover{
+    background-color: #2d2c2c;
+}
+
+#list1{
+    margin: 30px;
+}
