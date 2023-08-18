@@ -39,6 +39,11 @@ class CategoryService {
         return this.categories.find((category) => category.id == id);
     }
 
+    //U =>  UPDATE
+    updateCategory(id, name){
+        const category = this.getCategoriesById(id);
+        category.name = name
+    }
 }
 class productService{
     constructor(){
