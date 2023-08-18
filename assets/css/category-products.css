@@ -47,6 +47,10 @@ h2{
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+.form-container input:focus{
+    outline: 0;
+}
+
 .btn{
     background-color: #fd1b1b;
     color: #fff;
@@ -55,9 +59,11 @@ h2{
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
 }
 
 .btn:hover{
     background-color: #e60e0e;
     transform: scale(1.05);
 }
+

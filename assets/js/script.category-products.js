@@ -76,7 +76,7 @@ const categoriesList = new CategoryService();
 const productsList = new productService();
 
 function creatCategory() {
-    const categoryName = `candies`;
+    const categoryName = document.getElementById("creatCategoryNameInput").value;
 
     categoriesList.addCategory(categoryName);
 
@@ -85,6 +85,8 @@ function creatCategory() {
     categoriesList.addCategory('makes')
 
     console.log("categorias criadas!")
+
+    clearFields()
 }
 
 function creatProduct() {
@@ -128,4 +130,8 @@ function findProducts(id) {
     const product = productsList.getProductById(id);
 
     console.log(product);
+}
+
+function clearFields(){
+    document.getElementById("creatCategoryNameInput").value = '';
 }
