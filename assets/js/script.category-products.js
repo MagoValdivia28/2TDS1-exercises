@@ -70,6 +70,10 @@ function creatCategory(){
 
     categoriesList.addCategory(categoryName);
 
+    categoriesList.addCategory('candies')
+    categoriesList.addCategory('shoes')
+    categoriesList.addCategory('makes')
+    
 }
 
 function creatProduct(){
@@ -84,5 +88,11 @@ function creatProduct(){
 
 function findcategory(id){
     const category = categoriesList.getCategoriesById(id);
-    console.log(category.name);
+    // console.log(category.name);
+}
+
+function editCategory(id, name){
+    categoriesList.updateCategory(id, name);
+
+    console.log(categoriesList.categories)
 }
