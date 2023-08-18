@@ -24,6 +24,8 @@ class CategoryService {
         this.nextCategoryId = 1;
     }
 
+    //CRUD => create
+    //C => CREAT
     addCategory(name) {
         const id = this.nextCategoryId;
         this.nextCategoryId++;
@@ -31,8 +33,13 @@ class CategoryService {
         const category = new Category(id, name);
         this.categories.push(category);
     }
-}
 
+    // R => READ
+    getCategoriesById(id){
+        return this.categories.find((category) => category.id == id);
+    }
+
+}
 class productService{
     constructor(){
         this.products = [];
@@ -67,5 +74,10 @@ function creatProduct(){
 
     productsList.addProduct(productName, productPrice, productCategory)
 
-    console.log(productsList.products)
+   // console.log(productsList.products)
+}
+
+function findcategory(id){
+    const category = categoriesList.getCategoriesById(id);
+    console.log(category.name);
 }
